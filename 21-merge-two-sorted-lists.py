@@ -5,9 +5,9 @@
 class ListNode:
     """Definition for singly-linked list.
     """
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, nxt=None):
         self.val = val
-        self.next = next
+        self.next = nxt
 
     def __str__(self):
         return f'{self.val} -> {self.next}'
