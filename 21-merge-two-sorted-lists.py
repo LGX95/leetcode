@@ -1,24 +1,7 @@
 """Question: https://leetcode.com/problems/merge-two-sorted-lists/
 """
 
-
-class ListNode:
-    """Definition for singly-linked list.
-    """
-    def __init__(self, val=0, nxt=None):
-        self.val = val
-        self.next = nxt
-
-    def __str__(self):
-        return f'{self.val} -> {self.next}'
-
-    @classmethod
-    def from_list(cls, array):
-        curr = dummy = cls()
-        for i in array:
-            curr.next = cls(i)
-            curr = curr.next
-        return dummy.next
+from datastruct import ListNode
 
 
 class Solution:
