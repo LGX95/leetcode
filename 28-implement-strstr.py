@@ -1,6 +1,8 @@
 """Question: https://leetcode.com/problems/implement-strstr/
 """
 
+from util import print_vars
+
 
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
@@ -12,9 +14,9 @@ class Solution:
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     haystack = "hello"
     needle = "ll"
     output = Solution().strStr(haystack, needle)
-    print(f'haystack: {haystack}, needle: {needle}, output: {output}')
+    print_vars(haystack, needle, output)
     assert output == 2
