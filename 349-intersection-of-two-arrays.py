@@ -8,12 +8,7 @@ from util import print_vars
 
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        set1 = set(nums1)
-        res = set()
-        for i in nums2:
-            if i in set1:
-                res.add(i)
-        return list(res)
+        return list(set(nums1) & set(nums2))
 
 
 if __name__ == '__main__':
