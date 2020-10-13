@@ -11,13 +11,8 @@ class Solution:
         from collections import Counter
         cnt = Counter(A[0])
         for i in A:
-            ci = Counter(i)
-            for c in cnt:
-                cnt[c] = min(cnt[c], ci[c])
-        res = []
-        for i, c in cnt.items():
-            res.extend([i] * c)
-        return res
+            cnt &= Counter(i)
+        return list(cnt.elements())
 
 
 if __name__ == '__main__':
