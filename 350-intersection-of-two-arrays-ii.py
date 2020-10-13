@@ -8,13 +8,11 @@ from util import print_vars
 
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        from collections import defaultdict
-        nums1_cnt = defaultdict(int)
+        from collections import Counter
+        nums1_cnt = Counter(nums1)
         res = []
-        for i in nums1:
-            nums1_cnt[i] += 1
         for i in nums2:
-            if nums1_cnt.get(i) and nums1_cnt.get(i) > 0:
+            if nums1_cnt[i] > 0:
                 res.append(i)
                 nums1_cnt[i] -= 1
         return res
